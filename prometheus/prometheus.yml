@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # BTC node PC (Linux)
+  - job_name: "btcnode-linux"
+    static_configs:
+      - targets: ["192.168.1.86:9100"]
+
+  # Laptop (Linux)
+  - job_name: "laptop-linux"
+    static_configs:
+      - targets: ["192.168.1.78:9100"]
+
+  # Gaming PC (Windows)
+  - job_name: "gaming-windows"
+    static_configs:
+      - targets: ["192.168.1.241:9182"]
